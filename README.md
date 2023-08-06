@@ -29,4 +29,11 @@
 - Tree Shaking - remove unused code
 - Different dev and prod bundles
 
-# Browser list
+# browserslist
+
+- Browserslist is a tool that allows specifying which browsers should be supported in your frontend app by specifying "queries" in a config file(package.json). It's used by frameworks/libraries such as React, Angular and Vue, but it's not limited to them.
+- Let's see each individual query added in package.json file:
+  1. 0.2%: All browsers that have at least 0.2% of global market share
+  2. not dead: Exclude browsers without official support in the last 24 months
+  3. not ie <= 11: Exclude IE 11 and older versions
+  4. not op_mini all: Exclude Opera Mini
