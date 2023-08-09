@@ -1,0 +1,29 @@
+.header {
+  display: flex;
+  background-color: gray;
+  flex-direction: row;
+  justify-content: space-between;
+  border: 1px solid black;
+}
+
+.logo {
+  width: 20px;
+  height: 20px;
+}
+
+.nav-items {
+  display: flex;
+}
+.list {
+  display: flex;
+  flex-direction: row;
+}
+.list-items {
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+}
+
+.search {
+  justify-items: center;
+}
