@@ -1,0 +1,38 @@
+.res-card {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  border: 1px seashell gray;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.res-card:hover {
+  background-color: gray;
+}
+
+.res-logo {
+  width: 250px;
+  height: 200px;
+  border-radius: 10px;
+}
+
+.cards {
+  display: flex;
+  font-size: 16px;
+  margin: 0px;
+  padding: 5px;
+}
+
+.rating {
+  display: flex;
+  font-size: 14px;
+  margin: 0px;
+  padding: 0px 5px;
+}
+
+.cuisins {
+  display: flex;
+  font-size: 12px;
+  margin: 0px;
+  padding: 5px;
+}
