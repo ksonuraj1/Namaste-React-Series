@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import "../Header/Header.css";
 
 const Header = () => {
+  const buttonName = "Login";
+  const [loginText, setLoginText] = useState(buttonName);
+
+  const handleLoginClick = () => {
+    loginText == "Login" ? setLoginText("Logout") : setLoginText("Login");
+  };
   return (
     <div className="header">
       <div className="logo">
@@ -15,8 +21,10 @@ const Header = () => {
         <ul className="list">
           <li className="list-items">Home</li>
           <li className="list-items">Contact Us</li>
-          <li className="list-items">Login</li>
           <li className="list-items">Cart</li>
+          <button className="login-button" onClick={handleLoginClick}>
+            {loginText}
+          </button>
         </ul>
       </div>
     </div>
