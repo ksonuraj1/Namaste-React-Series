@@ -4,6 +4,7 @@ import RestaurantCard from "../RestaurantCard/RestaurantCard";
 import { resList } from "../../Services/Mockdata/ReslistData";
 import SortModal from "../Modal/SortModal/SortModal";
 import Shimmer from "../Shimmer/Shimmer";
+import { Link } from "react-router-dom";
 
 const Body = () => {
   const [listtOfRestaurant, setListOfRestaurant] = useState([]);
@@ -71,6 +72,7 @@ const Body = () => {
             <button className="search-button" onClick={handleSearchText}>
               Search
             </button>
+
             <button className="search-button">Filter</button>
 
             <button className="search-button" onClick={handleSortModal}>
@@ -90,15 +92,23 @@ const Body = () => {
         </div>
         <div className="res-container">
           {filteredRes?.map((item) => (
-            <RestaurantCard key={item?.info?.feeDetails.id} resData={item} />
+            <Link
+              style={{ textDecoration: "none", color: "black" }}
+              key={item?.info?.id}
+              to={"restaurants/" + item?.info?.id}
+            >
+              <RestaurantCard resData={item} />
+            </Link>
           ))}
         </div>
       </div>
-      {openSortModal && (
-        <div className="sort-modal">
-          <SortModal />
-        </div>
-      )}
+      <div>
+        {openSortModal && (
+          <div className="sort-modal">
+            <SortModal />
+          </div>
+        )}
+      </div>
     </>
   );
 };
