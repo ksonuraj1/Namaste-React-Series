@@ -37,3 +37,14 @@
   2. not dead: Exclude browsers without official support in the last 24 months
   3. not ie <= 11: Exclude IE 11 and older versions
   4. not op_mini all: Exclude Opera Mini
+
+# UseEffect
+
+- if the dependency array in not present - useEffect is called in every render
+- if the dependency array is empty then its called in initial render(just once)
+- if the dipendency is filled with any reactive value (props, state, object and function) the its called on dependency changes
+
+# 2-Types of Routing
+
+- Server side
+- client side

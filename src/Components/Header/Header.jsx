@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../Header/Header.css";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const buttonName = "Login";
@@ -8,6 +9,9 @@ const Header = () => {
   const handleLoginClick = () => {
     loginText == "Login" ? setLoginText("Logout") : setLoginText("Login");
   };
+
+  useEffect(() => {}, []);
+
   return (
     <div className="header">
       <div className="logo">
@@ -19,8 +23,12 @@ const Header = () => {
       </div>
       <div className="nav-items">
         <ul className="list">
-          <li className="list-items">Home</li>
-          <li className="list-items">Contact Us</li>
+          <li className="list-items">
+            <Link to="/">Home</Link>
+          </li>
+          <li className="list-items">
+            <Link to="/contact-us">Contact Us</Link>
+          </li>
           <li className="list-items">Cart</li>
           <button className="login-button" onClick={handleLoginClick}>
             {loginText}
